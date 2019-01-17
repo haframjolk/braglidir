@@ -1,0 +1,62 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* Hide selection */
+::selection {
+    background-color: transparent;
+}
+.poem {
+    margin: 0;
+    line-height: 2;
+    font-size: 2em;
+}
+.line {
+    display: block;
+}
+/* ======
+   Kveður
+   ====== */
+.line > .k:nth-of-type(odd) {
+    /* Hákveður */
+    border: 1px solid black;
+    border-width: 1px 1px 0 0;
+}
+.line > .k:nth-of-type(even) {
+    /* Lágkveður */
+    border: 1px solid black;
+    border-width: 0 1px 1px 0;
+}
+.line > .k:last-of-type {
+    border-right: none;
+}
+
+.aa {
+    /* Áhersluatkvæði */
+    text-decoration: underline;
+}
+.al {
+    position: relative;
+}
+.al::after {
+    /* Áherslulaust atkvæði */
+    content: "\02D8";
+    position: absolute;
+    bottom: 0;
+    top: 0.35em;
+    left: 0.075em;
+}
+
+/* Show non-space chars on screen to make editing easier */
+@media screen {
+    .char {
+        background-color: lightgray;
+        margin-right: 2px;
+        cursor: pointer;
+    }
+    .char.space {
+        background-color: transparent;
+    }
+}
