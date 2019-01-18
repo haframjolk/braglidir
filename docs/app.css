@@ -42,11 +42,15 @@ html {
 }
 .al::after {
     /* Áherslulaust atkvæði */
-    content: "\02D8";
+    content: "";
     position: absolute;
-    bottom: 0;
-    top: 0.35em;
-    left: 0.075em;
+    bottom: 1px;
+    left: 0;
+    height: 0.3125em; /* 1px with 2em font size */
+    width: 100%;
+    /* Curved underline */
+    box-shadow: inset 0px -0.0625em 0px black; /* 2px with 2em font size */
+    border-radius: 50%;
 }
 
 /* Show non-space chars on screen to make editing easier */
