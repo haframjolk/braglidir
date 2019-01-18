@@ -16,15 +16,15 @@ Once you have chosen your poem, **braglidir** will read it and display it on the
 
 To mark a stressed syllable (áhersluatkvæði), left click on the appropriate vowel. You can remove the mark the same way. Stressed syllables are marked with a straight underline.
 
-To mark an unstressed syllable (áherslulaust atkvæði), right click or <kbd>control</kbd>-click (Mac only) on the appropriate vowel.
+To mark an unstressed syllable (áherslulaust atkvæði), right click or <kbd>Control</kbd>-click (Mac only) on the appropriate vowel.
 You can remove the mark the same way. Unstressed syllables are marked with a downwards curved underline.
 
-To split the poem into *kveður* (heavy feet and light feet), hold <kbd>shift</kbd> and left click on the character (space or non-space) you want to be the last in said *kveða*. The first *kveða* in a line will always be a *hákveða* (heavy foot), and the following *kveður* will alternate between *lágkveða* and *hákveða*. To remove a *kveða*, hold <kbd>shift</kbd> and left click on any character within said *kveða*.
+To split the poem into *kveður* (heavy feet and light feet), hold <kbd>Shift</kbd> and left click on the character (space or non-space) you want to be the last in said *kveða*. The first *kveða* in a line will always be a *hákveða* (heavy foot), and the following *kveður* will alternate between *lágkveða* and *hákveða*. To remove a *kveða*, hold <kbd>shift</kbd> and left click on any character within said *kveða*.
 
 ![My awesome haiku, properly marked up](img/edited.png)
 
 ## Saving output
 
-**braglidir** is designed to output via your browser's printing dialog. To save the output as a file, simply print the page to PDF. The gray background and space between characters will not be visible in the printed output.
+**braglidir** is designed to output via your browser's print dialog. To save the output as a file, simply print the page to PDF. The gray background and space between characters will not be visible in the printed output.
 
 ![My awesome haiku, properly marked up and printed to a PDF](img/pdf-output.png)
