@@ -1,17 +1,16 @@
 "use strict";
 
-// TODO: Implement FETCH for poem
-let poem = `Bágt á þjóð í þessum heimi.
-Í þessum heimi brjóstin úng
-eru líkt og guð þeim gleymi,
-gángstígur sem örlög þúng
-troða undir stígvél stunda
-stígvél járnuð grimd og sorg;
-fætur manna, fætur hunda,
-fletja brjóstin einsog torg.`;
-
-// Split poem by newline
-poem = poem.split("\n");
+// Read file input as text
+function readFile(e) {
+    let file = e.target.files[0];
+    let reader = new FileReader();
+    // When done reading file, call init() and remove file input
+    reader.onload = function(evt) {
+        init(evt.target.result);
+        e.target.parentNode.removeChild(e.target);
+    };
+    reader.readAsText(file);
+}
 
 // Toggle áhersluatkvæði
 function toggleAa(e) {
@@ -25,14 +24,18 @@ function toggleAl(e) {
     e.target.classList.toggle("al");
 }
 
-// Set up editor when window has loaded
-window.onload = function() {
+// Init function; create poem
+function init(poem) {
+    // Split poem by newline
+    poem = poem.split("\n");
+    
     // Create poem element
     let p = document.createElement("p");
     p.className = "poem";
 
     // For each line
     for (let i = 0; i < poem.length; i++) {
+        // Create span element for each line
         let line = document.createElement("span");
         line.className = "line";
         // For each character
@@ -121,4 +124,9 @@ window.onload = function() {
     }
     // Add poem to body
     document.body.appendChild(p);
+}
+
+// On load, initialize file selection
+window.onload = function() {
+    document.getElementById("file-select").addEventListener("change", readFile);
 };
