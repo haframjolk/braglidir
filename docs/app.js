@@ -15,12 +15,18 @@ function readFile(e) {
 // Toggle áhersluatkvæði
 function toggleAa(e) {
     e.preventDefault();
+    // Remove áherslulaust atvæði class if exists
+    e.target.classList.remove("al");
+    // Add áhersluatkvæði class
     e.target.classList.toggle("aa");
 }
 
 // Toggle áherslulaust atkvæði
 function toggleAl(e) {
     e.preventDefault();
+    // Remove áhersluatkvæði class if exists
+    e.target.classList.remove("aa");
+    // Add áherslulaust atkvæði class
     e.target.classList.toggle("al");
 }
 
