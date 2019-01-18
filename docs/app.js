@@ -14,7 +14,6 @@ function readFile(e) {
 
 // Toggle áhersluatkvæði
 function toggleAa(e) {
-    e.preventDefault();
     // Remove áherslulaust atvæði class if exists
     e.target.classList.remove("al");
     // Add áhersluatkvæði class
@@ -23,7 +22,6 @@ function toggleAa(e) {
 
 // Toggle áherslulaust atkvæði
 function toggleAl(e) {
-    e.preventDefault();
     // Remove áhersluatkvæði class if exists
     e.target.classList.remove("aa");
     // Add áherslulaust atkvæði class
@@ -111,13 +109,20 @@ function init(poem) {
                         }
                         // If shift key is not being held, mark áhersluatkvæði
                         else {
-                            toggleAa(e);
+                            if (!e.target.classList.contains("space")) {
+                                toggleAa(e);
+                            }
                         }
                     }
                 }
             });
             // Mark áherslulaust atkvæði with secondary mouse button
-            span.addEventListener("contextmenu", toggleAl);
+            span.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+                if (!e.target.classList.contains("space")) {
+                    toggleAl(e);
+                }
+            });
             /* ==========
                End events
                ========== */
