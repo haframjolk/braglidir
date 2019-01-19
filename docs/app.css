@@ -49,7 +49,7 @@ html {
     height: 0.3125em; /* 1px with 2em font size */
     width: 100%;
     /* Curved underline */
-    box-shadow: inset 0px -0.0625em 0px black; /* 2px with 2em font size */
+    box-shadow: inset 0px -0.0625em 0px; /* 2px with 2em font size */
     border-radius: 50%;
 }
 
