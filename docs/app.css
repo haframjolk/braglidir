@@ -4,14 +4,14 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-/* Hide selection */
-::selection {
-    background-color: transparent;
-}
 .poem {
     margin: 0;
     line-height: 2;
     font-size: 2em;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .line {
     display: block;
