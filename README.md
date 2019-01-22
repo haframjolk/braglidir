@@ -28,3 +28,7 @@ To split the poem into *kveður* (heavy feet and light feet), hold <kbd>Shift</k
 **braglidir** is designed to output via your browser's print dialog. To save the output as a file, simply print the page to PDF. The gray background and space between characters will not be visible in the printed output.
 
 ![My awesome haiku, properly marked up and printed to a PDF](img/pdf-output.png)
+
+## License
+
+This project is licensed under the GNU General Public License v3.0. See repository LICENSE file for more details.
