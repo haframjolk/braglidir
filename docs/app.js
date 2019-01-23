@@ -28,6 +28,7 @@ function toggleAl(e) {
     e.target.classList.toggle("al");
 }
 
+// Toggle ljóðstafir
 function toggleLs(e) {
     e.target.classList.toggle("ls");
 }
