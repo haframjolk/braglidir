@@ -53,6 +53,11 @@ html {
     border-radius: 50%;
 }
 
+.bh::after {
+    /* Braghvíld */
+    content: " //";
+}
+
 /* Show non-space chars on screen to make editing easier */
 @media screen {
     .char {

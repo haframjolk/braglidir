@@ -107,7 +107,22 @@ function init(poem) {
                                 parent.parentNode.replaceChild(docFrag, parent);
                             }
                         }
-                        // If shift key is not being held, mark áhersluatkvæði
+                        // If alt key is being held, mark braghvíld
+                        else if (e.altKey) {
+                            let parent = e.target.parentElement;
+                            let nextSibling = e.target.nextSibling;
+                            // If a braghvíld already exists after char, remove it
+                            if (nextSibling.classList.contains("bh")) {
+                                parent.removeChild(nextSibling);
+                            }
+                            // Else, create one
+                            else {
+                                let span = document.createElement("span");
+                                span.className = "bh";
+                                parent.insertBefore(span, nextSibling);
+                            }
+                        }
+                        // If no key is being held, mark áhersluatkvæði
                         else {
                             if (!e.target.classList.contains("space")) {
                                 toggleAa(e);

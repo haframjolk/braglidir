@@ -23,6 +23,8 @@ To split the poem into *kveður* (heavy feet and light feet), hold <kbd>Shift</k
 
 ![My awesome haiku, properly marked up](img/edited.png)
 
+To mark *braghvíld* (cesura - a small pause), hold <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac) and click on the character you want the pause to come after. You can remove the mark the same way. Brahvíld is marked with two slashes (//).
+
 ## Saving output
 
 **braglidir** is designed to output via your browser's print dialog. To save the output as a file, simply print the page to PDF. The gray background and space between characters will not be visible in the printed output.
