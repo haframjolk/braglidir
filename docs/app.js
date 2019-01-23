@@ -28,6 +28,10 @@ function toggleAl(e) {
     e.target.classList.toggle("al");
 }
 
+function toggleLs(e) {
+    e.target.classList.toggle("ls");
+}
+
 // Init function; create poem
 function init(poem) {
     // Split poem by newline
@@ -131,11 +135,18 @@ function init(poem) {
                     }
                 }
             });
-            // Mark áherslulaust atkvæði with secondary mouse button
+            // Secondary mouse button
             span.addEventListener("contextmenu", function(e) {
                 e.preventDefault();
-                if (!e.target.classList.contains("space")) {
-                    toggleAl(e);
+                // If shift is being held, toggle ljóðstafir
+                if (e.shiftKey) {
+                    toggleLs(e);
+                }
+                // If no key is being held, mark áherslulaust atkvæði
+                else {
+                    if (!e.target.classList.contains("space")) {
+                        toggleAl(e);
+                    }
                 }
             });
             /* ==========

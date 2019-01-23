@@ -23,6 +23,8 @@ To split the poem into *kveður* (heavy feet and light feet), hold <kbd>Shift</k
 
 ![My awesome haiku, properly marked up](img/edited.png)
 
+To mark *ljóðstafir*, hold <kbd>Shift</kbd> and right-click or <kbd>Control</kbd>-click (Mac only) on the appropriate character. You can remove the mark the same way. *Ljóðstafir* are marked with a bold font.
+
 To mark *braghvíld* (cesura - a small pause), hold <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac) and click on the character you want the pause to come after. You can remove the mark the same way. Brahvíld is marked with two slashes (//).
 
 ## Saving output
