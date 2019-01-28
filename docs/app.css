@@ -74,3 +74,13 @@ html {
         background-color: transparent;
     }
 }
+/* Dark Mode */
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #ddd;
+    }
+    .char {
+        background-color: #666;
+    }
+}
