@@ -40,7 +40,7 @@ html {
 .al {
     position: relative;
 }
-.al::after {
+.al::before {
     /* Áherslulaust atkvæði */
     content: "";
     position: absolute;
@@ -61,6 +61,11 @@ html {
 .bh::after {
     /* Braghvíld */
     content: " //";
+}
+
+.con::after {
+    /* Contraction */
+    content: "’";
 }
 
 /* Show non-space chars on screen to make editing easier */

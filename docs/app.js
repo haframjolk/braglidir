@@ -28,6 +28,11 @@ function toggleAl(e) {
     e.target.classList.toggle("al");
 }
 
+// Toggle contraction (úrfelling)
+function toggleContraction(e) {
+    e.target.classList.toggle("con");
+}
+
 // Toggle ljóðstafir
 function toggleLs(e) {
     e.target.classList.toggle("ls");
@@ -112,7 +117,7 @@ function init(poem) {
                                 parent.parentNode.replaceChild(docFrag, parent);
                             }
                         }
-                        // If alt key is being held, mark braghvíld
+                        // If alt key is being held, toggle braghvíld
                         else if (e.altKey) {
                             let parent = e.target.parentElement;
                             let nextSibling = e.target.nextSibling;
@@ -142,6 +147,10 @@ function init(poem) {
                 // If shift is being held, toggle ljóðstafir
                 if (e.shiftKey) {
                     toggleLs(e);
+                }
+                // If alt key is being held, toggle contraction
+                else if (e.altKey) {
+                    toggleContraction(e);
                 }
                 // If no key is being held, mark áherslulaust atkvæði
                 else {

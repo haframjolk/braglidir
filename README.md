@@ -25,7 +25,9 @@ To split the poem into *kveður* (heavy feet and light feet), hold <kbd>Shift</k
 
 To mark *ljóðstafir*, hold <kbd>Shift</kbd> and right-click or <kbd>Control</kbd>-click (Mac only) on the appropriate character. You can remove the mark the same way. *Ljóðstafir* are marked with a bold font.
 
-To mark *braghvíld* (cesura - a small pause), hold <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac) and click on the character you want the pause to come after. You can remove the mark the same way. Brahvíld is marked with two slashes (//).
+To mark *braghvíld* (cesura - a small pause), hold <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac) and click on the character you want the pause to come after. You can remove the mark the same way. Braghvíld is marked with two slashes (//).
+
+To mark a contraction (*úrfelling*), hold <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac) and right click or <kbd>Control</kbd>-click (Mac only) on the appropriate vowel. An apostrophe (’) will appear behind it. You can remove it the same way.
 
 ## Saving output
 
