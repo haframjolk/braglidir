@@ -8,16 +8,16 @@
 
 [**braglidir** on GitHub Pages](https://reyniraron.github.io/braglidir)
 
-Once you load **braglidir** you will be asked to choose a file. Please choose poem in a plain text file (.txt).
+Once you load **braglidir** you will be asked to type a poem in the text area or choose a file. If uploading a file, please choose a poem in a plain text file (.txt).
 
 Once you have chosen your poem, **braglidir** will read it and display it on the page.
 
 ![My awesome haiku](img/unedited.png)
 
-To mark a stressed syllable (áhersluatkvæði), left click on the appropriate vowel. You can remove the mark the same way. Stressed syllables are marked with a straight underline.
+To mark a stressed syllable (áhersluatkvæði), left click on the appropriate vowel. You can remove the mark the same way. Stressed syllables are marked with a straight line above.
 
 To mark an unstressed syllable (áherslulaust atkvæði), right click or <kbd>Control</kbd>-click (Mac only) on the appropriate vowel.
-You can remove the mark the same way. Unstressed syllables are marked with a downwards curved underline.
+You can remove the mark the same way. Unstressed syllables are marked with a downwards curved line above.
 
 To split the poem into *kveður* (heavy feet and light feet), hold <kbd>Shift</kbd> and left click on the character (space or non-space) you want to be the last in said *kveða*. The first *kveða* in a line will always be a *hákveða* (heavy foot), and the following *kveður* will alternate between *lágkveða* and *hákveða*. To remove a *kveða*, hold <kbd>shift</kbd> and left click on any character within said *kveða*.
 
