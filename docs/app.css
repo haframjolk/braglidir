@@ -19,13 +19,13 @@ html {
 /* ======
    Kveður
    ====== */
+/* Hákveður */
 .line > .k:nth-of-type(odd) {
-    /* Hákveður */
     border: 1px solid;
     border-width: 1px 1px 0 0;
 }
+/* Lágkveður */
 .line > .k:nth-of-type(even) {
-    /* Lágkveður */
     border: 1px solid;
     border-width: 0 1px 1px 0;
 }
@@ -33,38 +33,47 @@ html {
     border-right: none;
 }
 
-.aa {
-    /* Áhersluatkvæði */
-    text-decoration: underline;
+/* Áhersluatkvæði, áherslulaus atkvæði */
+.aa::before, .al::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 0.3125em; /* 1px with 2em font size */
+    width: 100%;
 }
+
+/* Áhersluatkvæði */
+.aa {
+    position: relative;
+}
+.aa::before {
+    /* Straight line */
+    box-shadow: inset 0px -0.0625em 0px; /* 2px with 2em font size */
+}
+
+/* Áherslulaus atkvæði */
 .al {
     position: relative;
 }
 .al::before {
-    /* Áherslulaust atkvæði */
-    content: "";
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    height: 0.3125em; /* 1px with 2em font size */
-    width: 100%;
-    /* Curved underline */
+    /* Curved line */
     box-shadow: inset 0px -0.0625em 0px; /* 2px with 2em font size */
     border-radius: 50%;
 }
 
+/* Ljóðstafir */
 .ls {
-    /* Ljóðstafir */
     font-weight: bold;
 }
 
+/* Braghvíld */
 .bh::after {
-    /* Braghvíld */
     content: " //";
 }
 
+/* Contraction */
 .con::after {
-    /* Contraction */
     content: "’";
 }
 
