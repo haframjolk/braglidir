@@ -1,5 +1,7 @@
 "use strict";
 
+const inputSection = document.getElementById("input");
+
 // Read file input as text and initialize poem
 function readFile(e) {
     const file = e.target.files[0];
@@ -7,7 +9,7 @@ function readFile(e) {
     // When done reading file, call init() and remove file input
     reader.onload = function(evt) {
         init(evt.target.result);
-        document.getElementById("input").remove();
+        inputSection.remove();
     };
     reader.readAsText(file);
 }
@@ -20,7 +22,7 @@ function readFromTextarea(e) {
         return;
     }
     init(poem);
-    document.getElementById("input").remove();
+    inputSection.remove();
 }
 
 // Toggle áhersluatkvæði
@@ -185,7 +187,5 @@ function init(poem) {
 }
 
 // On load, initialize file selection
-window.onload = function() {
-    document.getElementById("file-select").addEventListener("change", readFile);
-    document.getElementById("submit-text").addEventListener("click", readFromTextarea);
-};
+document.getElementById("file-select").addEventListener("change", readFile);
+document.getElementById("submit-text").addEventListener("click", readFromTextarea);
