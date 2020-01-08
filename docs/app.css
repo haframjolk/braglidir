@@ -4,6 +4,22 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+/* Input section */
+#input {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#input h2 {
+    font-weight: normal;
+}
+#input #text #text-input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+}
+
+/* Poem display */
 .poem {
     margin: 0;
     line-height: 2;

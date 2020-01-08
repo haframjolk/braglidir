@@ -1,15 +1,26 @@
 "use strict";
 
-// Read file input as text
+// Read file input as text and initialize poem
 function readFile(e) {
-    let file = e.target.files[0];
-    let reader = new FileReader();
+    const file = e.target.files[0];
+    const reader = new FileReader();
     // When done reading file, call init() and remove file input
     reader.onload = function(evt) {
         init(evt.target.result);
-        e.target.parentNode.removeChild(e.target);
+        document.getElementById("input").remove();
     };
     reader.readAsText(file);
+}
+
+// Read text from textarea and initialize peom
+function readFromTextarea(e) {
+    const poem = document.getElementById("text-input").value;
+    // Do not submit empty poem
+    if (poem === "") {
+        return;
+    }
+    init(poem);
+    document.getElementById("input").remove();
 }
 
 // Toggle áhersluatkvæði
@@ -44,20 +55,20 @@ function init(poem) {
     poem = poem.split("\n");
     
     // Create poem element
-    let p = document.createElement("p");
+    const p = document.createElement("p");
     p.className = "poem";
 
     // For each line
     for (let i = 0; i < poem.length; i++) {
         // Create span element for each line
-        let line = document.createElement("span");
+        const line = document.createElement("span");
         line.className = "line";
         // For each character
         for (let j = 0; j < poem[i].length; j++) {
             // Create span element for each char
-            let span = document.createElement("span");
+            const span = document.createElement("span");
             span.className = "char";
-            let textnode = document.createTextNode(poem[i][j]);
+            const textnode = document.createTextNode(poem[i][j]);
             // Mark space chars for presentation purposes
             if (textnode.textContent === " ") {
                 span.classList.add("space");
@@ -76,17 +87,17 @@ function init(poem) {
                         // Hákveður/lágkveður editing mode if shift key is pressed
                         if (e.shiftKey) {
                             // Get parent element of char
-                            let parent = e.target.parentElement;
+                            const parent = e.target.parentElement;
                             // If the char selected does not already belong to a group, create one
                             if (!parent.classList.contains("k")) {
                                 // Create group for chars
-                                let group = document.createElement("span");
+                                const group = document.createElement("span");
                                 group.className = "k";
 
                                 let k = 0;
                                 // Iterate over all children of the char's parent
                                 while (k < parent.children.length) {
-                                    let char = parent.children[k];
+                                    const char = parent.children[k];
                                     // Skip any groups encountered
                                     if (char.classList.contains("k")) {
                                         k++;
@@ -106,11 +117,11 @@ function init(poem) {
                             }
                             // If selected char does belong to a group, delete its group (ungroup it)
                             else {
-                                let docFrag = document.createDocumentFragment();
+                                const docFrag = document.createDocumentFragment();
                                 // For each child
                                 while (parent.firstChild) {
                                     // Remove child from parent and add to docFrag
-                                    let child = parent.removeChild(parent.firstChild);
+                                    const child = parent.removeChild(parent.firstChild);
                                     docFrag.appendChild(child);
                                 }
                                 // Replace parent with docFrag
@@ -119,15 +130,15 @@ function init(poem) {
                         }
                         // If alt key is being held, toggle braghvíld
                         else if (e.altKey) {
-                            let parent = e.target.parentElement;
-                            let nextSibling = e.target.nextSibling;
+                            const parent = e.target.parentElement;
+                            const nextSibling = e.target.nextSibling;
                             // If a braghvíld already exists after char, remove it
                             if (nextSibling.classList.contains("bh")) {
                                 parent.removeChild(nextSibling);
                             }
                             // Else, create one
                             else {
-                                let span = document.createElement("span");
+                                const span = document.createElement("span");
                                 span.className = "bh";
                                 parent.insertBefore(span, nextSibling);
                             }
@@ -176,4 +187,5 @@ function init(poem) {
 // On load, initialize file selection
 window.onload = function() {
     document.getElementById("file-select").addEventListener("change", readFile);
+    document.getElementById("submit-text").addEventListener("click", readFromTextarea);
 };
