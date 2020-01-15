@@ -6,7 +6,7 @@
 
 ## Usage
 
-[**braglidir** on GitHub Pages](https://reyniraron.github.io/braglidir)
+[**braglidir** on GitHub Pages](https://reynmag.github.io/braglidir)
 
 Once you load **braglidir** you will be asked to type a poem in the text area or choose a file. If uploading a file, please choose a poem in a plain text file (.txt).
 
