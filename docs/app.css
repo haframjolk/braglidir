@@ -57,15 +57,12 @@ html {
     left: 0;
     height: 0.3125em; /* 1px with 2em font size */
     width: 100%;
+    box-shadow: inset 0px -0.0625em 0px; /* 2px with 2em font size */
 }
 
 /* Áhersluatkvæði */
 .aa {
     position: relative;
-}
-.aa::before {
-    /* Straight line */
-    box-shadow: inset 0px -0.0625em 0px; /* 2px with 2em font size */
 }
 
 /* Áherslulaus atkvæði */
@@ -74,7 +71,6 @@ html {
 }
 .al::before {
     /* Curved line */
-    box-shadow: inset 0px -0.0625em 0px; /* 2px with 2em font size */
     border-radius: 50%;
 }
 
